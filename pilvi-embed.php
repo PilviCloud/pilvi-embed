@@ -14,11 +14,10 @@
  *
  * @wordpress-plugin
  * Plugin Name:       Pilvi embed
- * Plugin URI:        http://pilvi.com/
+ * Plugin URI:        http://developer.pilvi.com/docs/embeds/plugins/wordpress
  * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
  * Version:           1.0.0
  * Author:            Oleg Soldatikhine
- * Author URI:        http://pilvi.com/
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       pilvi-embed
