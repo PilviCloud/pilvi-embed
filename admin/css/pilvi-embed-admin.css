@@ -1,0 +1,246 @@
+.pilvi-embed-admin-options{
+	background-color: white;
+	width:800px;
+	text-align:left;
+	border-left: 1px solid #dbdbdb;
+	border-right: 1px solid #dbdbdb;
+	border-top:  1px solid #dbdbdb;
+	border-radius: 5px 5px 0px 0px;
+	overflow-y:auto;
+	height: 90%;
+	padding-bottom:30px;
+	max-height: 800px;
+	width: 820px;
+}	
+
+.pilvi-embed-admin-body{
+	height:100%;
+    overflow:hidden;
+	width:800px;
+	border-right: 1px solid #dbdbdb;
+	border-radius:5px;
+	margin-top: 20px;
+	
+	
+	
+}	
+.pilvi-embed-admin-footer{
+	position:static;
+    bottom: 0;
+    height: 10%;
+	background-color: white;
+	width: 800px;
+	text-align:left;
+	border-top:none;
+	border-bottom: 1px solid #dbdbdb;
+	border-left: 1px solid #dbdbdb;
+	border-right: 1px solid #dbdbdb;
+	border-radius: 0px 0px 5px 5px;
+}
+	
+.pilvi-embed-admin-header{
+	color: #30adea !important;
+	display: block;
+    font-size: 42px;
+	font-weight: 600;
+	background-color:#30adea;
+	padding:5px;
+	border-radius:5px 5px 0px 0px;
+	margin-bottom:30px;
+	
+}
+.pilvi-embed-admin-header img{
+	padding:10px 10px 10px 45px;
+}	
+.pilvi-embed-admin-secondary-header{
+	font-size: 18px; 
+	font-weight: 600; 
+	color: #303132;
+	background-color:#f2f3f4;
+	margin-left:50px;
+	margin-right:50px;
+	margin-top:15px;
+	margin-bottom:60px;
+	padding-left:15px;
+	padding-right:15px;
+}
+.pilvi-embed-admin-secondary-header2{
+	font-size: 18px; 
+	font-weight: 600; 
+	color: #303132;
+	
+}
+
+.pilvi-embed-admin-body-text{
+	font-size: 14px;
+	font-weight:600;
+	color:#303132;
+}
+.pilvi-embed-admin-description-text{
+	font-size:14px; 
+	font:normal;
+	color: #808182 ; 
+	
+}	
+.pilvi-embed-admin-textarea{
+	display: inline-block;
+    padding: 0.4em 0.4em 0.4em 0.4em;
+	border-style: solid;
+    border-width: 1px;
+    border-color: #ccc;
+    color: #202020;
+    font-weight: 400;
+    border-radius: 2px;
+    transition: border-color 0.15s;
+    padding: 0.4em 0 0.4em 1em;
+    height: 36px;
+	width:350px;
+	
+}
+.pilvi-embed-admin-button-reset{
+	font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    height: 36px;
+    padding: 0 1em;
+    border-radius: 0.25em;
+    transition: background 0.15s, box-shadow 0.25s;
+    letter-spacing: -0.25px;
+    position: relative;
+    box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.2);
+	color:#505152;
+	border: inherit;
+	background-color: #f4f5f6;
+	float:right;
+	
+}	
+.pilvi-embed-admin-button {
+	font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    height: 36px;
+    padding: 0 1em;
+    border-radius: 0.25em;
+    letter-spacing: -0.25px;
+    position: relative;
+    background-color:#30adea;
+	color: #fff;
+	border: inherit;
+	box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.2);
+	transition: background 0.15s, box-shadow 0.25s;
+	float:right;
+	margin:2px;
+	
+	
+}
+.pilvi-embed-admin-header-button{
+	font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    height: 36px;
+    padding: 0 1em;
+    border-radius: 0.25em;
+    letter-spacing: -0.25px;
+    position: relative;
+    background-color:#30adea;
+	color: #fff;
+	border: inherit;
+	box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.2);
+	transition: background 0.15s, box-shadow 0.25s;
+	float:right;
+	margin:2px;
+}	
+.pilvi-embed-admin-drop-down{
+	border-radius: 5px;
+    width: 100px;
+    height:40px !important;
+	border: 1px solid #dcdcdc;
+	margin:2px;
+}
+.pilvi-embed-admin-upper-drop-down{
+	border-radius: 5px;
+    width: 100px;
+    height:40px !important;
+	border: 1px solid #dcdcdc;
+	float:right;
+	margin:2px;
+	
+}
+.pilvi-embed-admin-form-input-position{
+	
+	position: relative;
+	left: 50%; 
+	text-align: left;
+	width:360px;
+	
+}	
+
+.pilvi-embed-admin-shortcode-div{
+	display: inline-block;
+    padding: 0.4em 0.4em 0.4em 0.4em;
+	border-style: solid;
+    border-width: 1px;
+    border-color: #ccc;
+    color: #202020;
+    font-weight: 400;
+    border-radius: 2px;
+    transition: border-color 0.15s;
+    padding: 0.4em 0 0.4em 1em;
+    width:335px;
+	position: relative;
+	left: 50%; 
+	text-align: left;
+	height:45px;
+
+}
+.pilvi-embed-admin-add-margin{
+	margin-left:50px;
+}	
+
+
+.pilvi-embed-admin-main-buttons-div{
+	margin-bottom:10px;
+	margin-right:50px;
+	height:40px;
+}	
+
+.pilvi-embed-admin-separator{
+	color:#e6e7e8;
+	margin-top:30px;
+	margin-bottom:30px;
+	margin-right:50px;
+	margin-left:50px;
+	width:100 %;
+}	
+.pilvi-embed-admin-separator-footer{
+	color:#e6e7e8;
+	margin-top:0px;
+	margin-bottom:30px;
+	width:100 %;
+}	
+
+#alert-session-host{
+	float:right;
+	margin-right:50px;
+	font-size:14px; 
+	font:normal;
+	color: #808182 ; 
+}
+#alert-api-host{
+	float:right;
+	margin-right:50px;
+	font-size:14px; 
+	font:normal;
+	color: #808182 ; 
+}	
+.myLink{
+	color:#30adea !important;
+}	
+#information-div{
+	width:100px;
+	margin:0px;
+	float:left;
+	margin-left:50px;
+}	
+
+
