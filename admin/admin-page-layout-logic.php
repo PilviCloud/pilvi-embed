@@ -111,21 +111,14 @@
 	/* default settings */
 	if(isset($_POST["default"])){
 		
-		/* option names */
+		update_option( 'pilvi_emb_version', "stable" ); 
+		update_option( 'pilvi_emb_api_host', "saas.api.service.pilvi.com"  ); 
+		update_option( 'pilvi_emb_https', "true" );
 		
-		$opt_session_host = 'pilvi_emb_session_host';
-		$opt_api_host = 'pilvi_emb_api_host';
-		$opt_language = 'pilvi_emb_language';
-		$opt_prices = 'pilvi_emb_prices';
-		$opt_compare = 'pilvi_emb_compare';
-		$opt_https = 'pilvi_emb_https';
-		
-		update_option( $opt_session_host, "onboarding.saas.pilvi.com" );
-		update_option( $opt_api_host, "saas.api.service.pilvi.com"  );
-		update_option( $opt_language,  "en_US"  );
-		update_option( $opt_prices, "VAT_INCL_VAT_EXCL" );
-		update_option( $opt_compare, "true" );
-		update_option( $opt_https, "true" );
+		update_option( 'pilvi_emb_session_host', "" );
+		update_option( 'pilvi_emb_language', "" );
+		update_option( 'pilvi_emb_prices', "" ); 
+		update_option( 'pilvi_emb_compare', "" );
 
 			
 	}	

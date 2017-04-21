@@ -30,6 +30,22 @@ class Pilvi_Embed_Activator {
 	 * @since    1.0.0
 	 */
 	public static function activate() {
+		
+		update_option('pilvi_embed_plugin_version', PILVI_EMBED_VERSION);
+		
+		$version = get_option('pilvi_emb_version');
+		
+		if($version == ""){
+			update_option( 'pilvi_emb_version', "stable" ); 
+			update_option( 'pilvi_emb_api_host', "saas.api.service.pilvi.com"  ); 
+			update_option( 'pilvi_emb_https', "true" );
+			update_option( 'pilvi_emb_session_host', "" );
+			update_option( 'pilvi_emb_language', "" );
+			update_option( 'pilvi_emb_prices', "" ); 
+			update_option( 'pilvi_emb_compare', "" );
+		
+		}	
+		
 
 	}
 

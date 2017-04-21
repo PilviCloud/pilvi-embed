@@ -24,6 +24,11 @@
  * Domain Path:       /languages
  */
 
+ // Current version number
+if (!defined('PILVI_EMBED_VERSION')){
+	define('PILVI_EMBED_VERSION', '1.0.0');
+}
+ 
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
 	die;
@@ -55,6 +60,14 @@ register_deactivation_hook( __FILE__, 'deactivate_pilvi_embed' );
  * admin-specific hooks, and public-facing site hooks.
  */
 require plugin_dir_path( __FILE__ ) . 'includes/class-pilvi-embed.php';
+
+
+function pilvi_emb_check_version() {
+	if (PILVI_EMBED_VERSION !== get_option('pilvi_embed_plugin_version')){
+		activate_pilvi_embed();
+	}	
+}
+add_action('plugins_loaded', 'pilvi_emb_check_version');
 
 /**
  * Begins execution of the plugin.

@@ -4,8 +4,11 @@
 
 	$version_parameters = array(
 		
-		"0.1.5" => array(
-			"session_host"=>"","api_host"=>"","https"=>"","opt_language"=>"","opt_prices"=>"")
+		"0.1.8" => array(
+			"session_host"=>"","api_host"=>"","https"=>"","opt_language"=>"","opt_prices"=>""),
+			
+		"stable" => array(
+			"session_host"=>"","api_host"=>"","https"=>"","opt_language"=>"","opt_prices"=>"")	
 		
 	);
 	

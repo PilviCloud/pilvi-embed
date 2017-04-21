@@ -29,3 +29,26 @@
 if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 	exit;
 }
+// deletes plugins options when uninstalled
+$all_plugin_options = array(
+	'pilvi_emb_session_host',
+	'pilvi_emb_api_host',
+	'pilvi_emb_language',
+	'pilvi_emb_prices',
+	'pilvi_emb_compare',
+	'pilvi_emb_https',
+	'js_pilvi_emb_version',
+	'js_pilvi_emb_session_host',
+	'js_pilvi_emb_api_host',
+	'js_pilvi_emb_https',
+	'js_pilvi_emb_language',
+	'js_pilvi_emb_prices',
+	'js_pilvi_emb_compare',
+	'pilvi_emb_version',
+	'pilvi_embed_plugin_version'
+);	
+
+
+foreach($all_plugin_options as $optionName) {
+    delete_option($optionName);
+}
