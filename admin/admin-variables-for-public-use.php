@@ -1,4 +1,5 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit;
 	include "version_parameters_array.php";
 	/* This file will prepeare all needable wariables for public js code 
 	   This file will save all needable variables to wp options */

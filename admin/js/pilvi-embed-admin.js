@@ -4,6 +4,8 @@
 	var count = 0;
 	var count_group = 0;
 	
+	var pluginsUrl = plugins_path.pluginsUrl;
+	
 	function button_hide(){
 		document.getElementById("hide_button_div").style.display = "none";
 		if(count != 0){
@@ -100,7 +102,7 @@
 			var res = encodeURI(uri);
 			$.ajax({
 				type: "GET",
-				url: "/wordpress/wp-content/plugins/pilvi-embed/admin/admin-validate-url.php",
+				url: pluginsUrl + "/pilvi-embed/admin/admin-validate-url.php",
 				data: "call=" + res,
 				/* if query made success */
 				success:function(data){
@@ -126,7 +128,7 @@
 			var safe = encodeURI(site);
 			$.ajax({
 				type:"GET",
-				url: "/wordpress/wp-content/plugins/pilvi-embed/admin/admin-validate-url.php",
+				url: pluginsUrl + "/pilvi-embed/admin/admin-validate-url.php",
 				data: "query=" + safe,
 				success:function(data){
 				var myJSON2 = JSON.stringify(data);
@@ -150,7 +152,7 @@
             /*name*/
 			title: 'Pilvi embed button',
             /*image url */
-			image: "/wordpress/wp-content/plugins/pilvi-embed/images/icon-tiny-mce.png",
+			image: pluginsUrl + "/pilvi-embed/images/icon-tiny-mce.png",
             /* button type */
 			type: 'menubutton',
 			/* button functionality<-- 2 options --> */

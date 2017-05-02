@@ -1,4 +1,13 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit;
+
+	$user = wp_get_current_user();
+	$allowed_roles = array('editor', 'administrator', 'author', 'contributor');
+	
+	if (!array_intersect($allowed_roles, $user->roles)){
+		exit("You have no right to be here");
+	}	
+
 	/* include version array */	
 	include "version_parameters_array.php";
 	$compare = get_option ('pilvi_emb_compare');
@@ -10,7 +19,7 @@
 	/* if post select */
 	if(isset($_POST["select"])){
 	
-		$version = $_POST['version'];
+		$version = sanitize_text_field( $_POST['version'] );
 		
 		/* if version is latest code fechs first key from the array */
 		
@@ -80,12 +89,12 @@
 	/* if settings / save / is pressed */
 	if(isset($_POST["change"])){
 		
-		$url = $_POST['url'];
-		$apiUrl = $_POST['site'];
-		$optPrices = $_POST['prices'];
-		$optLanguage = $_POST['language'];
-		$compare = $_POST['compare'];
-		$https = $_POST['https'];
+		$url =  sanitize_text_field( $_POST['url'] ); 
+		$apiUrl = sanitize_text_field( $_POST['site'] );  						
+		$optPrices = sanitize_text_field( $_POST['prices'] ); 
+		$optLanguage = sanitize_text_field( $_POST['language'] ); 
+		$compare = sanitize_text_field( $_POST['compare'] ); 
+		$https = sanitize_text_field( $_POST['https'] );
 		
 		
 		/* option names */

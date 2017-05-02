@@ -1,5 +1,5 @@
 <?php
-
+if ( ! defined( 'ABSPATH' ) ) exit;
 /**
  * The public-facing functionality of the plugin.
  *
@@ -128,8 +128,8 @@ class Pilvi_Embed_Public {
 		
 		 $a = shortcode_atts( array('id' => 'null','prices' => 'null'), $atts );
 	
-		$id=$a['id'];
-		$prices=$a['prices'];
+		$id= sanitize_text_field($a['id']);
+		$prices= sanitize_text_field($a['prices']);
 		
 		if($prices != "null"){
 		
@@ -149,9 +149,9 @@ class Pilvi_Embed_Public {
 		
 		/* getting users values from shortcode */
 		
-			$id=$a['id'];
-			$prices=$a['prices'];
-			$compare=$a['compare'];
+			$id= sanitize_text_field($a['id']);
+			$prices= sanitize_text_field($a['prices']);
+			$compare= sanitize_text_field($a['compare']);
 							
 		/* making shure that only "true" or "false" have been used */
 		

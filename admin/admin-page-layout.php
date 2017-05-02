@@ -1,11 +1,12 @@
 <?php 
+if ( ! defined( 'ABSPATH' ) ) exit;
 include "admin-page-layout-logic.php"; 
 include "admin-variables-for-public-use.php";
 ?>
 <div class="pilvi-embed-admin-body">
 <div class="pilvi-embed-admin-options">
 	<div class="pilvi-embed-admin-header">
-		<img class="pilvi-embed-admin-logo" src="/wordpress/wp-content/plugins/pilvi-embed/images/pilvi-logo-big.png" ><br>
+		<img class="pilvi-embed-admin-logo" src="<?php echo esc_url( plugins_url( 'pilvi-embed/images/pilvi-logo-big.png')); ?>" ><br>
 	</div>
 	<div class="pilvi-embed-admin-secondary-header2">
 		<div class="pilvi-embed-admin-add-margin">

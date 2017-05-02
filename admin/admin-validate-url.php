@@ -1,5 +1,5 @@
 <?php
-
+if ( ! defined( 'ABSPATH' ) ) exit;
 /* getting chosen host  */	
 	
     if(isset($_GET['call'])){

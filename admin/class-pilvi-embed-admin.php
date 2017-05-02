@@ -1,5 +1,5 @@
 <?php
-
+if ( ! defined( 'ABSPATH' ) ) exit;
 /**
  * The admin-specific functionality of the plugin.
  *
@@ -97,6 +97,10 @@ class Pilvi_Embed_Admin {
 		 */
 
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/pilvi-embed-admin.js', array( 'jquery' ), $this->version, false );
+		
+		wp_localize_script($this->plugin_name, plugins_path, array(
+			'pluginsUrl' => esc_url(plugins_url()),
+		));
 
 	}
 	
