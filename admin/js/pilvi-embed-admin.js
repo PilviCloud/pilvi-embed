@@ -92,57 +92,72 @@
 		hide_changes_information();
 		local_store();
 	});
-	/* if url text area value changed */
-	function validate_users_session_host_imput(value) {
-		/* hiding alert div if its showed */	
-		hiding_session_host_alert();
-		/* making query to server what checks if is url valid */
-		jQuery(document).ready(function($) {	
+	
+	function validate_users_session_host_imput(value){
+		
+		jQuery(document).ready(function($) {
+			
+			hiding_session_host_alert();
 			var uri = value;
 			var res = encodeURI(uri);
-			$.ajax({
-				type: "GET",
-				url: pluginsUrl + "/pilvi-embed/admin/admin-validate-url.php",
-				data: "call=" + res,
-				/* if query made success */
-				success:function(data){
-					var myJSON = JSON.stringify(data);
-					if(myJSON == "false"){
-					/* if url is incorrect showing alert div */
+			
+			var data = {
+				'action': 'my_action',
+				'query': res
+			};
+			
+			jQuery.post( ajaxurl, data, function(response) {
+				var myJSON = JSON.stringify(response);
+				json = JSON.parse(myJSON)
+					if(json.response == false){
+					
 						function showAlertSessionHost(){
 							document.getElementById("hide-alert-session-host").style.display = "inline";
 						}
 						showAlertSessionHost();
-						/* getting error message if wrong url */
 						document.getElementById("alert-session-host").innerHTML = "Incorrect session host. Please verify the host and try again.";
 					}
-				}
+						
+					
 			});
+		
 		});
-	};
-	/* function for checking the site is allmost simular than validate url, check documentation from it */
+		
+		
+	}	
+	
 	function validate_users_api_host_input(value){
-		hiding_api_host_alert();
-		jQuery(document).ready(function($){
-			var site = value;
-			var safe = encodeURI(site);
-			$.ajax({
-				type:"GET",
-				url: pluginsUrl + "/pilvi-embed/admin/admin-validate-url.php",
-				data: "query=" + safe,
-				success:function(data){
-				var myJSON2 = JSON.stringify(data);
-					if(myJSON2== "false"){
+		
+		jQuery(document).ready(function($) {
+			
+			hiding_api_host_alert();
+			var uri = value;
+			var res = encodeURI(uri);
+			
+			var data = {
+				'action': 'my_action2',
+				'call': res
+			};
+			
+			jQuery.post( ajaxurl, data, function(response) {
+				var myJSON = JSON.stringify(response);
+				json = JSON.parse(myJSON)
+					if(json.response == false){
+						
 						function showAlertApiHost(){
 							document.getElementById("hide-alert-api-host").style.display = "inline";
 						}
 						showAlertApiHost();
 						document.getElementById("alert-api-host").innerHTML="Incorrect api host. Please verify the host and try again.";
 					}
-				}	
+				
+					
 			});
+			
+		
 		});
-	};
+	}	
+	
 	
 	/*js for pilvi embed tiny mce button*/
 	

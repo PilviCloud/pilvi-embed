@@ -136,4 +136,100 @@ class Pilvi_Embed_Admin {
 	
 	}
 	
+	public function validate_url() {
+		
+		header('Content-Type: application/json');
+		
+		global $wpdb; 
+
+		$url = $_POST['query'];
+
+		$decoded_url = urldecode ( $url );
+		
+		/* filtering host in right shape */
+		$validurl = filter_var($decoded_url, FILTER_SANITIZE_URL);	
+		
+				function not_valid_host(){
+					
+					/* "is not a valid host" */
+					$answer = array('response' => false);
+					$answer = (object)$answer;
+					$myJSON = json_encode($answer);
+					print $myJSON;
+				
+				}
+				/* checking that ip or url is not puttetd in textarea */
+				
+					if (filter_var($validurl, FILTER_VALIDATE_IP) === true) {
+						not_valid_host();
+						exit;
+					}
+					
+					if(filter_var($validurl, FILTER_VALIDATE_URL) === true) {
+						not_valid_host();
+						exit;
+					}
+					
+				/* if not >> getting hosts ip and checking that ip is correct & site is availble */ 	
+						
+			if($validurl != "" and filter_var(gethostbyname($validurl), FILTER_VALIDATE_IP)){
+				/* "is a valid host" */
+				
+				
+				$answer = array('response' => true);
+				$answer = (object)$answer;
+				$myJSON = json_encode($answer);
+				print $myJSON;
+				
+			} else {
+				not_valid_host();
+			
+			}
+		
+		wp_die(); 
+		
+	}
+	
+	public function validate_api_host(){
+		
+		header('Content-Type: application/json');
+		
+		global $wpdb; 
+		
+		$address = $_POST['call'];
+			
+			$decoded_address = urldecode ( $address );
+			$validate_address = filter_var($decoded_address, FILTER_SANITIZE_URL);
+			
+			function not_valid_host(){
+					
+					/* "is not a valid host" */
+					$answer = array('response' => false);
+					$answer = (object)$answer;
+					$myJSON = json_encode($answer);
+					print $myJSON;
+				
+				}
+			
+			
+			if (filter_var($validate_address, FILTER_VALIDATE_IP) === true) {
+					not_valid_host();
+					exit;
+				} 	
+				
+				if($validate_address != "" and filter_var(gethostbyname($validate_address), FILTER_VALIDATE_IP)){
+					$answer = array('response' => true);
+					$answer = (object)$answer;
+					$myJSON = json_encode($answer);
+					print $myJSON;
+					
+				}else{
+					not_valid_host();
+				}		
+			
+			
+		wp_die(); 	
+		
+	}	
+	
 }

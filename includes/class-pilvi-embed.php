@@ -156,6 +156,8 @@ class Pilvi_Embed {
 		$this->loader->add_action( 'admin_menu', $plugin_admin, 'pilvi_emb_menu_page');
 		$this->loader->add_filter("mce_external_plugins", $plugin_admin, "enqueue_plugin_scripts");
 		$this->loader->add_filter("mce_buttons", $plugin_admin, "register_buttons_editor");
+		$this->loader->add_action( 'wp_ajax_my_action', $plugin_admin, 'validate_url' );
+		$this->loader->add_action( 'wp_ajax_my_action2', $plugin_admin, 'validate_api_host' );
 		
 	}
 
