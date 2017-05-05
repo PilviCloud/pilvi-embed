@@ -113,8 +113,8 @@ class Pilvi_Embed_Admin {
 	}
 	
 	public function display_dash_board_page(){
-		include(__DIR__ . '/admin-page-layout.php');
-		include(__DIR__ . '/admin-validate-url.php');
+		require_once(__DIR__ . '/admin-page-layout.php');
+		
 	
 	}
 
@@ -142,7 +142,7 @@ class Pilvi_Embed_Admin {
 		
 		global $wpdb; 
 
-		$url = $_POST['query'];
+		$url = sanitize_text_field($_POST['query']);
 
 		$decoded_url = urldecode ( $url );
 		
@@ -196,7 +196,7 @@ class Pilvi_Embed_Admin {
 		
 		global $wpdb; 
 		
-		$address = $_POST['call'];
+		$address = sanitize_text_field($_POST['call']);
 			
 			$decoded_address = urldecode ( $address );
 			$validate_address = filter_var($decoded_address, FILTER_SANITIZE_URL);

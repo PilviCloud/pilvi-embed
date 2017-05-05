@@ -1,7 +1,7 @@
 <?php 
 if ( ! defined( 'ABSPATH' ) ) exit;
-include "admin-page-layout-logic.php"; 
-include "admin-variables-for-public-use.php";
+require_once ("admin-page-layout-logic.php"); 
+require_once ("admin-variables-for-public-use.php");
 ?>
 <div class="pilvi-embed-admin-body">
 <div class="pilvi-embed-admin-options">

@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 	}	
 
 	/* include version array */	
-	include "version_parameters_array.php";
+	require_once("version_parameters_array.php");
 	$compare = get_option ('pilvi_emb_compare');
 	$https = get_option ('pilvi_emb_https');
 	/* feching version from database */
