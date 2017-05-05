@@ -123,7 +123,7 @@ class Pilvi_Embed_Admin {
 	public function enqueue_plugin_scripts($plugin_array){
 	
 		//enqueue TinyMCE plugin script with its ID.
-		$plugin_array["pilvi_button_plugin"] =  plugin_dir_url(__FILE__) . "js/pilvi-embed-admin.js";
+		$plugin_array["pilvi_button_plugin"] =  plugin_dir_url(__FILE__) . "js/tiny-mce-button.js";
 		return $plugin_array;
 	
 	}

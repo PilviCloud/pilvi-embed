@@ -7,7 +7,11 @@
 	var pluginsUrl = plugins_path.pluginsUrl;
 	
 	function button_hide(){
-		document.getElementById("hide_button_div").style.display = "none";
+		
+		if (jQuery('#hide_button_div').length > 0) {
+			document.getElementById("hide_button_div").style.display = "none";
+		}	
+		
 		if(count != 0){
 			count = -1;
 		}	
@@ -23,17 +27,21 @@
 	}
 	
 	function hiding_available_shortcodes(){
-		document.getElementById("hide-available-product-card-shortcodes").style.display = "none";
-		document.getElementById("hide-available-product-card-shortcodes-separator").style.display = "none";
 		
+		if (jQuery('#hide-available-product-card-shortcodes').length > 0) {
+			document.getElementById("hide-available-product-card-shortcodes").style.display = "none";
+			document.getElementById("hide-available-product-card-shortcodes-separator").style.display = "none";
+		}
 		if(count != 0){
 			count = -1;
 		}	
 	}	
 	
 	function hiding_available_group_shortcodes(){
-		document.getElementById("hide-available-product-card-group-shortcodes").style.display = "none";
 		
+		if (jQuery('#hide-available-product-card-group-shortcodes').length > 0) {
+			document.getElementById("hide-available-product-card-group-shortcodes").style.display = "none";
+		}
 		if(count_group != 0){
 			count_group = -1;
 		}
@@ -59,15 +67,21 @@
 	}	
 	/* hiding alert div */
 	function hiding_session_host_alert(){
-		document.getElementById("hide-alert-session-host").style.display = "none";
+		if (jQuery('#hide-alert-session-host').length > 0) {
+			document.getElementById("hide-alert-session-host").style.display = "none";
+		}	
 	}
 	/* hiding alert2 div */
 	function hiding_api_host_alert(){
-		document.getElementById("hide-alert-api-host").style.display = "none";
+		if (jQuery('#hide-alert-api-host').length > 0) {
+			document.getElementById("hide-alert-api-host").style.display = "none";
+		}	
 	}
 	
 	function hide_changes_information(){
-		document.getElementById("information-div").style.display = "none";
+		if (jQuery('#information-div').length > 0) {
+			document.getElementById("information-div").style.display = "none";
+		}	
 	}
 	function show_changes_information(){
 		sessionStorage.setItem('show', 'true');
@@ -159,44 +173,5 @@
 	}	
 	
 	
-	/*js for pilvi embed tiny mce button*/
-	
-	(function() {
-    tinymce.PluginManager.add('pilvi_button_plugin', function( editor, url ) {
-        editor.addButton( 'pilvi_button_plugin', {
-            /*name*/
-			title: 'Pilvi embed button',
-            /*image url */
-			image: pluginsUrl + "/pilvi-embed/images/icon-tiny-mce.png",
-            /* button type */
-			type: 'menubutton',
-			/* button functionality<-- 2 options --> */
-			menu:  [
-                {
-					/* button to product card */
-                    text: 'Product card',
-                    /* shortcode value */
-					value: '[pilvi_embed_product_card id="add-id"]',
-                    /* if button is clicked */
-					onclick: function() {
-                        editor.insertContent(this.value());
-                    }
-                },
-				{
-					/* button for product card group */
-                    text: 'Product card group',
-					/* value */
-                    value: '[pilvi_embed_product_card_group id="add-id"]',
-                    /* if clicked */
-					onclick: function() {
-                        editor.insertContent(this.value());
-                    }
-                },
-		   
-		   ]
-        });
-    });
-})();
-
 	
 	

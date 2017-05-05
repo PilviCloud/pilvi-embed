@@ -9,7 +9,7 @@
 	overflow-y:auto;
 	height: 90%;
 	padding-bottom:30px;
-	max-height: 800px;
+	max-height: 720px;
 	width: 820px;
 }	
 
@@ -215,7 +215,7 @@
 .pilvi-embed-admin-separator-footer{
 	color:#e6e7e8;
 	margin-top:0px;
-	margin-bottom:30px;
+	margin-bottom:10px;
 	width:100 %;
 }	
 
@@ -242,5 +242,3 @@
 	float:left;
 	margin-left:50px;
 }	
-
-
