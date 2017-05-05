@@ -48,6 +48,10 @@ Examples of embeddables can be found on Pilvi Developer site http://developer.pi
 
 == Changelog ==
 
+= 1.0.1 =
+
+bug and secure fixes made
+
 = 1.0.0 =
 
 Initial version of the plugin
