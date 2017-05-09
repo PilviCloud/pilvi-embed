@@ -17,7 +17,7 @@
  * Plugin URI:        http://developer.pilvi.com/docs/embeds/plugins/wordpress
  * Description:       Shortcode plugin
  * Version:           1.0.2
- * Author:            Oleg Soldatikhine
+ * Author:            Pilvi
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       pilvi-embed
