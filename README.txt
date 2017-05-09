@@ -1,5 +1,5 @@
 === Pilvi Embed ===
-Contributors: pilvi
+Contributors: pilvi, olegolas 
 Donate link: http://pilvi.com/
 Tags: embed, pilvi
 Requires at least: 4.7.3
