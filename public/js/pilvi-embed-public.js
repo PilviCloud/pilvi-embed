@@ -15,9 +15,9 @@ if(php_variables.LANGUAGE != ""){
 	foo.LANGUAGE = php_variables.LANGUAGE;
 }
 if(php_variables.PRICES != ""){
-	foo.PRICES = [ php_variables.PRICES ];	
+	foo.PRICES =  php_variables.PRICES;	
 }
-if(php_variables.COMPARE != ""){
+if(php_variables.COMPARE == "true"){
 	foo.COMPARE = php_variables.COMPARE;
 }	
 

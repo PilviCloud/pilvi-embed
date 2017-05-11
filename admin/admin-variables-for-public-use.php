@@ -19,12 +19,12 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 	$new_price = get_option('pilvi_emb_prices'); 
 
 	if($new_price=="VAT_INCL_VAT_EXCL"){
-		$js_price = "VAT_INCL,VAT_EXCL";
+	$js_price = "['VAT_INCL','VAT_EXCL']";
 	}elseif($new_price=="VAT_EXCL_VAT_INCL"){	
-		$js_price = "VAT_EXCL,VAT_INCL";
+	$js_price = "['VAT_EXCL','VAT_INCL']";
 	}elseif($new_price=="VAT_EXCL"){
-		$js_price = "VAT_EXCL";
-	}elseif($new_price=="VAT_INCL"){
+		$js_price = "['VAT_EXCL']";
+	}elseif($new_price=="['VAT_INCL']"){
 		$js_price = "VAT_INCL";
 	}	
 	
