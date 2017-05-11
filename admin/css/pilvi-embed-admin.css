@@ -7,27 +7,28 @@
 	border-top:  1px solid #dbdbdb;
 	border-radius: 5px 5px 0px 0px;
 	overflow-y:auto;
-	height: 90%;
-	padding-bottom:30px;
-	max-height: 720px;
-	width: 820px;
+	max-height: 100%;
+	padding-bottom:50px;
+	
+	
+	
 }	
 
 .pilvi-embed-admin-body{
-	height:100%;
-    overflow:hidden;
-	width:800px;
+	height:100% ;
+    width:800px;
 	border-right: 1px solid #dbdbdb;
 	border-radius:5px;
 	margin-top: 20px;
 	
 	
 	
+	
 }	
 .pilvi-embed-admin-footer{
-	position:static;
-    bottom: 0;
-    height: 10%;
+	position:fixed;
+    bottom: 0px;
+    height: 50px;
 	background-color: white;
 	width: 800px;
 	text-align:left;
@@ -36,6 +37,8 @@
 	border-left: 1px solid #dbdbdb;
 	border-right: 1px solid #dbdbdb;
 	border-radius: 0px 0px 5px 5px;
+	padding-bottom:20px;
+	z-index: +1;
 }
 	
 .pilvi-embed-admin-header{
@@ -114,6 +117,10 @@
 	float:right;
 	
 }	
+.pilvi-embed-admin-button-reset:hover {
+    background-color:#e0e1e2;
+}
+
 .pilvi-embed-admin-button {
 	font-size: 14px;
     text-transform: uppercase;
@@ -130,8 +137,9 @@
 	transition: background 0.15s, box-shadow 0.25s;
 	float:right;
 	margin:2px;
-	
-	
+}
+.pilvi-embed-admin-button:hover {
+    background-color:#288bbd;
 }
 .pilvi-embed-admin-header-button{
 	font-size: 14px;
@@ -150,6 +158,9 @@
 	float:right;
 	margin:2px;
 }	
+.pilvi-embed-admin-header-button:hover {
+    background-color:#288bbd;
+}
 .pilvi-embed-admin-drop-down{
 	border-radius: 5px;
     width: 100px;
@@ -217,6 +228,7 @@
 	margin-top:0px;
 	margin-bottom:10px;
 	width:100 %;
+	padding-top:10px;
 }	
 
 #alert-session-host{
@@ -242,3 +254,4 @@
 	float:left;
 	margin-left:50px;
 }	
+

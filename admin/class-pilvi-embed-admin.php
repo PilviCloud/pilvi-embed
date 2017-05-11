@@ -74,6 +74,8 @@ class Pilvi_Embed_Admin {
 		 */
 
 		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/pilvi-embed-admin.css', array(), $this->version, 'all' );
+		
+		wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'); 
 
 	}
 

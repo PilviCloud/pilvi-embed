@@ -31,6 +31,7 @@
 		if (jQuery('#hide-available-product-card-shortcodes').length > 0) {
 			document.getElementById("hide-available-product-card-shortcodes").style.display = "none";
 			document.getElementById("hide-available-product-card-shortcodes-separator").style.display = "none";
+			document.getElementById("myLink").innerHTML = "Shortcodes for product card <i class='fa fa-angle-down' aria-hidden='true'></i>";
 		}
 		if(count != 0){
 			count = -1;
@@ -41,6 +42,7 @@
 		
 		if (jQuery('#hide-available-product-card-group-shortcodes').length > 0) {
 			document.getElementById("hide-available-product-card-group-shortcodes").style.display = "none";
+			document.getElementById("my-group-link").innerHTML = "Shortcodes for product card group <i class='fa fa-angle-down' aria-hidden='true'></i>"
 		}
 		if(count_group != 0){
 			count_group = -1;
@@ -51,6 +53,7 @@
 		if(count == 0){
 			document.getElementById("hide-available-product-card-shortcodes").style.display = "inline";
 			document.getElementById("hide-available-product-card-shortcodes-separator").style.display = "inline";
+			document.getElementById("myLink").innerHTML = "Shortcodes for product card <i class='fa fa-angle-up' aria-hidden='true'></i>";
 		}else{
 			hiding_available_shortcodes();
 		}
@@ -60,6 +63,7 @@
 	function show_product_card_group_shortcodes(){
 		if(count_group == 0){
 			document.getElementById("hide-available-product-card-group-shortcodes").style.display = "inline";
+			document.getElementById("my-group-link").innerHTML = "Shortcodes for product card group <i class='fa fa-angle-up' aria-hidden='true'></i>"
 		}else{
 			hiding_available_group_shortcodes();
 		}

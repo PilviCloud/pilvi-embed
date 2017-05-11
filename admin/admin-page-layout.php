@@ -138,7 +138,7 @@ require_once ("admin-variables-for-public-use.php");
 	
 <!--  card_names function activated -->
 		<p class="pilvi-embed-admin-body-text">
-			<a class="myLink"  onclick="show_product_card_shortcodes();">Shortcodes for product card</a>
+			<a class="myLink" id="myLink"  onclick="show_product_card_shortcodes();">Shortcodes for product card</a>
 		</p>
 	</div>	
 		<div id="hide-available-product-card-shortcodes">
@@ -161,7 +161,7 @@ require_once ("admin-variables-for-public-use.php");
 	</div>
 	<div class="pilvi-embed-admin-add-margin">
 		<p class="pilvi-embed-admin-body-text">
-			<a class="myLink"  onclick="show_product_card_group_shortcodes()">Shortcodes for product card group</a>
+			<a class="myLink" id="my-group-link"  onclick="show_product_card_group_shortcodes()">Shortcodes for product card group</a>
 		</p>	
 	</div>	
 	<div id="hide-available-product-card-group-shortcodes">
@@ -201,11 +201,10 @@ require_once ("admin-variables-for-public-use.php");
 			<div id="information-div">
 			<p class="pilvi-embed-admin-description-text">Changes saved</p>
 			</div>
-			<INPUT type="submit" class="pilvi-embed-admin-button-reset" onclick="show_changes_information();" Name = "default" VALUE ="Reset default settings">	
+			<INPUT type="submit" class="pilvi-embed-admin-button-reset" onclick="show_changes_information();" Name = "default" VALUE ="RESET TO DEFAULT SETTINGS">	
 			<INPUT type="submit" class= "pilvi-embed-admin-button" onclick="show_changes_information();" Name = "change" VALUE = "Save">
 			</form>
 		</div>
 	</div>
 </div>
-
 
