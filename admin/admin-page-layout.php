@@ -126,7 +126,8 @@ require_once ("admin-variables-for-public-use.php");
 			<div class="pilvi-embed-admin-form-input-position">
 				<select class="pilvi-embed-admin-drop-down" name="language" value="<?php print get_option('pilvi_emb_language') ?>">
 					<option value="auto">Automatic</option>
-					<option value="en_US">en_US</option>
+					<option value="\'en_US\'">en_US</option>
+					<option value="\'fi_FI\'">fi_FI</option>
 				</select><br><br><br>
 			</div>
 		<hr class="pilvi-embed-admin-separator">
