@@ -16,7 +16,7 @@
  * Plugin Name:       Pilvi Embed
  * Plugin URI:        http://developer.pilvi.com/docs/embeds/plugins/wordpress
  * Description:       Shortcode plugin
- * Version:           1.0.5
+ * Version:           1.0.6
  * Author:            Pilvi
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
@@ -26,7 +26,7 @@
 
  // Current version number
 if (!defined('PILVI_EMBED_VERSION')){
-	define('PILVI_EMBED_VERSION', '1.0.5');
+	define('PILVI_EMBED_VERSION', '1.0.6');
 }
  
 // If this file is called directly, abort.

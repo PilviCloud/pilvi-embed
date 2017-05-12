@@ -5,6 +5,9 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 	$version_parameters = array(
 		
+		"0.1.10" => array(
+			"session_host"=>"","api_host"=>"","https"=>"","opt_language"=>"","opt_prices"=>"","opt_compare"=>""),
+		
 		"0.1.9" => array(
 			"session_host"=>"","api_host"=>"","https"=>"","opt_language"=>"","opt_prices"=>"","opt_compare"=>""),
 		
