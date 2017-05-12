@@ -110,7 +110,7 @@ class Pilvi_Embed_Admin {
 	
 	public function pilvi_emb_menu_page(){
         
-		add_menu_page( 'Pilvi Embed page', 'Pilvi embed', 'manage_options', 'Pilvi', array($this, 'display_dash_board_page'),plugins_url( 'pilvi-embed/images/icon.png'),'3.0');
+		add_menu_page( 'Pilvi Embed page', 'Pilvi Embed', 'manage_options', 'Pilvi', array($this, 'display_dash_board_page'),plugins_url( 'pilvi-embed/images/icon.png'),'3.0');
 	
 	}
 	
